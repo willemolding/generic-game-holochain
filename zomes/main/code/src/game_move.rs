@@ -1,3 +1,7 @@
+///////////////////////////////
+// !! DEVCAMP- DO NOT EDIT !!//
+///////////////////////////////
+//
 use hdk::{
     entry_definition::ValidatingEntryType,
 };

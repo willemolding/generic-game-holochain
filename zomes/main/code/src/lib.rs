@@ -26,14 +26,12 @@ mod checkers;
 pub use checkers::{
     GameState,
     MoveType,
-    state_reducer,
 };
 
 // mod tictactoe;
 // pub use tictactoe::{
 //     GameState,
 //     MoveType,
-//     state_reducer,
 // };
 
 

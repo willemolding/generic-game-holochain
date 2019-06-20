@@ -1,3 +1,7 @@
+///////////////////////////////
+// !! DEVCAMP- DO NOT EDIT !!//
+///////////////////////////////
+
 use hdk::{
     AGENT_ADDRESS,
     entry_definition::ValidatingEntryType,
