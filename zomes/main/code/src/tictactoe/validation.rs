@@ -30,8 +30,9 @@ impl Move {
     pub fn is_valid(&self, game: Game, game_state: GameState) -> Result<(), String> {
         hdk::debug(format!("{:?}", game_state)).unwrap();
         // let current_player = get_current_player(&game, &self.author)?;
-        match &self.move_type {
-            MoveType::Place{pos} => {
+        match self.move_type {
+            MoveType::Place{x, y} => {
+                let pos = Piece{x, y};
                 is_players_turn(self.author.clone(), game, &game_state)?;
                 pos.is_in_bounds()?;
                 pos.is_empty(&game_state)?;

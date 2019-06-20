@@ -12,15 +12,13 @@ use hdk::holochain_core_types::{
 
 #[derive(Clone, Debug, Serialize, Deserialize, DefaultJson, PartialEq)]
 pub enum MoveType {
-    Place {
-        pos: Piece,
-    },
+    Place {x: usize, y: usize},
 }
 
 impl MoveType {
 	pub fn describe() -> Vec<MoveType> {
 		vec![
-			MoveType::Place{pos: Piece{x: 0, y: 0}}
+			MoveType::Place{x: 0, y: 0}
 			// add the other variants here to add descriptors
 		]
 	}

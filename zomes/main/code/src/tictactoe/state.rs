@@ -108,14 +108,14 @@ impl GameState {
 pub fn state_reducer(game: Game, current_state: GameState, next_move: &Move) -> GameState {
     let current_player = get_current_player(&game, &next_move.author).unwrap();
 
-    match &next_move.move_type {
-        MoveType::Place{pos} => {
+    match next_move.move_type {
+        MoveType::Place{x, y} => {
             let mut board = board_sparse_to_dense(&current_state);
             let mut moves = current_state.moves;
             moves.push(next_move.to_owned());
 
             // make the move by adding a new piece at the position
-            board[pos.x][pos.y] = match current_player { Player::Player1 => 1, Player::Player2 => 2};
+            board[x][y] = match current_player { Player::Player1 => 1, Player::Player2 => 2};
 
             // check if this resulted in a player victory
             let mut diag_down = 0;
