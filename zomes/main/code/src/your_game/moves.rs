@@ -12,11 +12,12 @@ use hdk::holochain_core_types::{
 
 #[derive(Clone, Debug, Serialize, Deserialize, DefaultJson, PartialEq)]
 pub enum MoveType {
-    // YOUR MOVE ENUM VARIENTS HERE
+    // <<DEVCAMP>> YOUR MOVE ENUM VARIENTS HERE
 }
 
 impl MoveType {
 	pub fn describe() -> Vec<MoveType> {
-		// SHOULD RETURN AN EXAMPLE OF EACH VARIENT
+		// <<DEVCAMP>> SHOULD RETURN AN EXAMPLE OF EACH VARIENT
+		Vec::new()
 	}
 }

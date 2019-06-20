@@ -23,8 +23,7 @@ const diorama = new Diorama({
 })
 
 
-require('./checkers')(diorama.registerScenario)
-// require('./tictactoe')(diorama.registerScenario)
+// <<DEVCAMP>> Your tests here
 
 
 diorama.run()

@@ -1,14 +1,8 @@
-use hdk::holochain_core_types::{
-    cas::content::Address,
-};
 
 use crate::game::Game;
 use crate::game_move::Move;
 use super::{
     GameState,
-    moves::Piece,
-    MoveType,
-    state::{board_sparse_to_dense, BOARD_SIZE},
 };
 
 
@@ -27,7 +21,8 @@ use super::{
 
 
 impl Move {
-    pub fn is_valid(&self, game: Game, game_state: GameState) -> Result<(), String> {
-        // Check if a move is valid given the current game and its state
+    pub fn is_valid(&self, _game: Game, _game_state: GameState) -> Result<(), String> {
+        // <<DEVCAMP>> Check if a move is valid given the current game and its state
+        Ok(())
     }
 }
