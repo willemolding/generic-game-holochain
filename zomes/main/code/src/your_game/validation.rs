@@ -22,7 +22,7 @@ use super::{
 
 impl Move {
     pub fn is_valid(&self, _game: Game, _game_state: GameState) -> Result<(), String> {
-        // <<DEVCAMP>> Check if a move is valid given the current game and its state
+        // <<DEVCAMP-TODO>> Check if a move is valid given the current game and its state
         Ok(())
     }
 }
