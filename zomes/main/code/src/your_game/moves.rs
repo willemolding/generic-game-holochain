@@ -12,26 +12,11 @@ use hdk::holochain_core_types::{
 
 #[derive(Clone, Debug, Serialize, Deserialize, DefaultJson, PartialEq)]
 pub enum MoveType {
-    MovePiece {
-        from: Piece,
-        to: Piece,
-    },
-    Resign,
+    // YOUR MOVE ENUM VARIENTS HERE
 }
 
 impl MoveType {
 	pub fn describe() -> Vec<MoveType> {
-		vec![
-			MoveType::MovePiece{from: Piece{x: 0, y: 0}, to: Piece{x: 0, y: 0}},
-			MoveType::Resign,
-			// add the other variants here to add descriptors
-
-		]
+		// SHOULD RETURN AN EXAMPLE OF EACH VARIENT
 	}
-}
-
-#[derive(Clone, Debug, Serialize, Deserialize, DefaultJson, PartialEq)]
-pub struct Piece {
-    pub x: usize,
-    pub y: usize,
 }
