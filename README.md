@@ -18,9 +18,9 @@ It might take a few seconds to unlock the keystore but you should see something 
 ```
 Using config path: ./conductor-config.toml
 Unlocking agent keys:
-Unlocking key for agent 'test_agent1': 
+Unlocking key for agent 'test_agent1':
 Reading keystore from ./agent1.keystore
-Unlocking key for agent 'test_agent2': 
+Unlocking key for agent 'test_agent2':
 Reading keystore from ./agent2.keystore
 2019-05-17 15:55:37 ThreadId(1):conductor: starting signal loop
 Reading DNA from ./dist/generic-game.dna.json
@@ -62,7 +62,7 @@ Your agent address is "HcScjcgKqXC5pmfvka9DmtEJwVr548yd86UPtJGGoue9ynuikuRTN7oE5
 Send this to other players so they can invite you to a game.
 
 
-No game> 
+No game>
 ```
 
 
@@ -76,7 +76,7 @@ cargo run http://localhost:3002 instance2
 
 ### 3. Play a game
 
-Now the tricky part, to play a game of tic-tac-toe with yourself! Keep the conductor running and both windows with the CLI. We'll refer to one of them as Agent A and the other as Agent B. 
+Now the tricky part, to play a game of tic-tac-toe with yourself! Keep the conductor running and both windows with the CLI. We'll refer to one of them as Agent A and the other as Agent B.
 
 Agent A will be the one to create the game. Copy the agent address from Agent B and run the following command in **Agent A**:
 ```
@@ -85,7 +85,7 @@ new_game HcScidPSdAT43q9qirJwt5rHJYjjsvougV3jgSBwdJujszw3bBu5Mktr74Rgnea
 
 This should create a new game and show the following output:
 ```
-Non-creator must make the first move 
+Non-creator must make the first move
 
   x  0 1 2
 y
@@ -93,7 +93,7 @@ y
 1   | | | |
 2   | | | |
 
-QmTNHtXZye7vz3d4LQz5zgHvk1wvxbsBHcstorDWQxshfZ> 
+QmTNHtXZye7vz3d4LQz5zgHvk1wvxbsBHcstorDWQxshfZ>
 ```
 
 We have just commit our first entry in the local chain and DHT! A `Game` entry was created with Agent B as the opponent and shared to the DHT. The hash at the bottom of the screen is the hash/address of the Game entry in the DHT. This is the unique identifier we can use to join this game (Note this will be different for everyone as our Game entry includes a timestamp).
@@ -103,12 +103,12 @@ Copy the game address and run the following in **Agent B**
 join_game QmTNHtXZye7vz3d4LQz5zgHvk1wvxbsBHcstorDWQxshfZ
 ```
 
-If the Game entry was successfully shared in the previous step Agent B shoud now see:
+If the Game entry was successfully shared in the previous step Agent B should now see:
 
 ```
 Setting current game hash to QmTNHtXZye7vz3d4LQz5zgHvk1wvxbsBHcstorDWQxshfZ
 
-Non-creator must make the first move 
+Non-creator must make the first move
 
   x  0 1 2
 y
@@ -141,7 +141,7 @@ Move cast successfully
 Waiting for gossip...
 OK!
 
-It is your opponents turn 
+It is your opponents turn
 
   x  0 1 2
 y
