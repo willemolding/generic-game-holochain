@@ -4,8 +4,6 @@ file = "./dist/generic-game.dna.json"
 hash = "QmDontCheck"
 
 
-
-
 [[agents]]
 id = "test_agent1"
 name = "HoloTester1"
@@ -17,8 +15,6 @@ id = "test_agent2"
 name = "HoloTester2"
 public_address = "HcScidPSdAT43q9qirJwt5rHJYjjsvougV3jgSBwdJujszw3bBu5Mktr74Rgnea"
 keystore_file = "./agent2.keystore"
-
-
 
 
 [[instances]]
@@ -36,8 +32,6 @@ agent = "test_agent2"
 [instances.storage]
 type = "memory"
 path = "tmp-storage"
-
-
 
 
 [[interfaces]]

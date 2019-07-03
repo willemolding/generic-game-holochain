@@ -18,6 +18,7 @@ use hdk::{
 };
 use hdk::holochain_core_types::{
     cas::content::Address,
+    cas::content::AddressableContent,
     entry::Entry,
 };
 
@@ -96,6 +97,19 @@ pub mod main {
             new_game.into(),
         );
         hdk::commit_entry(&game_entry)
+    }
+
+    #[zome_fn("hc_public")]
+    fn get_game_hash(opponent: Address, timestamp: u32) -> ZomeApiResult<Address> {
+        let new_game = Game {
+            player_1: opponent,
+            player_2: AGENT_ADDRESS.to_string().into(),
+            created_at: timestamp,
+        };
+        Ok(Entry::App(
+            "game".into(),
+            new_game.into(),
+        ).address())
     }
 
     #[zome_fn("hc_public")]
